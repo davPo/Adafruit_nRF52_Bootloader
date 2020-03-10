@@ -1,6 +1,6 @@
 # Adafruit nRF52 Bootloader
 
-[![Build Status](https://travis-ci.com/adafruit/Adafruit_nRF52_Bootloader.svg?branch=master)](https://travis-ci.com/adafruit/Adafruit_nRF52_Bootloader)
+[![Build Status](https://github.com/adafruit/Adafruit_nRF52_Bootloader/workflows/Build/badge.svg)](https://github.com/adafruit/Adafruit_nRF52_Bootloader/actions)
 
 This is a CDC/DFU/UF2 bootloader for nRF52 boards.
 
@@ -110,7 +110,7 @@ You must have have  a J-Link available to "unbrick" your device.
 Prerequisites
 
 - ARM GCC
-- Nordic's [nRF5x Command Line Tools](http://infocenter.nordicsemi.com/index.jsp?topic=%2Fcom.nordic.infocenter.tools%2Fdita%2Ftools%2Fnrf5x_command_line_tools%2Fnrf5x_installation.html)
+- Nordic's [nRF5x Command Line Tools](https://www.nordicsemi.com/Software-and-Tools/Development-Tools/nRF-Command-Line-Tools)
 
 To build:
 
@@ -164,7 +164,13 @@ Compiling file: main.c
 make: *** [_build/main.o] Error 127
 ```
 
-... you may need to edit the `Makefile` and update `GNU_INSTALL_ROOT` to point to the root path of your GCC ARM toolchain.
+... you may need to pass the location of the GCC ARM toolchain binaries to `make` using
+the variable `GNU_INSTALL_ROOT` as below:
+```
+$ make GNU_INSTALL_ROOT=/opt/gcc-arm-none-eabi-9-2019-q4-major/bin/ BOARD=feather_nrf52832 all
+```
+
+_Please note that the path needs a trailing path separator (a `/`)_
 
 #### 2. `mergehex: No such file or directory`
 
