@@ -236,7 +236,7 @@
           </folder>
         </folder>
         <configuration Name="Feather52832" build_exclude_from_build="Yes" />
-         <configuration Name="MDBT42V" build_exclude_from_build="Yes" />
+        <configuration Name="MDBT42V" build_exclude_from_build="Yes" />
       </folder>
       <folder Name="nrfx">
         <file file_name="../../lib/nrfx/nrfx.h" />
@@ -276,6 +276,7 @@
           </folder>
           <folder Name="src">
             <file file_name="../../lib/nrfx/drivers/src/nrfx_power.c" />
+            <file file_name="../../lib/nrfx/drivers/src/nrfx_nvmc.c" />
           </folder>
         </folder>
         <folder Name="hal">
@@ -283,14 +284,12 @@
           <file file_name="../../lib/nrfx/hal/nrf_ccm.h" />
           <file file_name="../../lib/nrfx/hal/nrf_clock.h" />
           <file file_name="../../lib/nrfx/hal/nrf_comp.h" />
-          <file file_name="../../lib/nrfx/hal/nrf_ecb.c" />
           <file file_name="../../lib/nrfx/hal/nrf_ecb.h" />
           <file file_name="../../lib/nrfx/hal/nrf_egu.h" />
           <file file_name="../../lib/nrfx/hal/nrf_gpio.h" />
           <file file_name="../../lib/nrfx/hal/nrf_gpiote.h" />
           <file file_name="../../lib/nrfx/hal/nrf_i2s.h" />
           <file file_name="../../lib/nrfx/hal/nrf_lpcomp.h" />
-          <file file_name="../../lib/nrfx/hal/nrf_nvmc.c" />
           <file file_name="../../lib/nrfx/hal/nrf_nvmc.h" />
           <file file_name="../../lib/nrfx/hal/nrf_pdm.h" />
           <file file_name="../../lib/nrfx/hal/nrf_power.h" />
@@ -342,9 +341,7 @@
             <configuration
               Name="Feather52832"
               build_exclude_from_build="Yes" />
-               <configuration
-              Name="MDBT42V"
-              build_exclude_from_build="Yes" />
+            <configuration Name="MDBT42V" build_exclude_from_build="Yes" />
           </file>
           <file file_name="../../lib/nrfx/mdk/ses_startup_nrf_common.s">
             <configuration
@@ -366,9 +363,7 @@
             <configuration
               Name="Feather52832"
               build_exclude_from_build="Yes" />
-                <configuration
-              Name="MDBT42V"
-              build_exclude_from_build="Yes" />
+            <configuration Name="MDBT42V" build_exclude_from_build="Yes" />
           </file>
           <file file_name="../../lib/nrfx/mdk/system_nrf52840.h" />
         </folder>
